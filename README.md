@@ -1,6 +1,6 @@
 # 祈福签插件
 
-基于 `skyblessings-python-api` 的祈福签 nonebot 插件移植版本。
+基于 [`skyblessings-python-api`](https://github.com/XingWo/skyblessings-python-api) 的祈福签 nonebot 插件移植版本。
 
 ## 功能特性
 
@@ -97,3 +97,5 @@ skyblessings
 3. **优雅降级**: 缺少 apscheduler 时仅禁用自动清理，其它功能正常
 4. **类型完整**: 完整的 159 项签文数据和 45 种颜色映射
 5. **渲染高效**: 图片生成大小约 120KB，渲染速度快
+
+> **注意**: 本插件基于 [XingWo/skyblessings-python-api](https://github.com/XingWo/skyblessings-python-api) 项目移植，如需了解原始实现请访问原项目仓库。
