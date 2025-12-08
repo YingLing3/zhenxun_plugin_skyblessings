@@ -86,9 +86,7 @@ class BlessingRenderer:
         bg_items = [item for item in DRAW_ITEMS if item.remark == "backgroundimg"]
         bg_item = self._draw_random_item(bg_items)
         result.background_image = BACKGROUND_IMAGE_MAP.get(bg_item.name, "")
-        text_items = self._get_children("0")
-        if not text_items:
-            text_items = self._get_children("9")
+        text_items = self._get_children(bg_item.id)
         text_items = [item for item in text_items if item.remark == "textimg"]
         text_item = self._draw_random_item(text_items)
         result.text_image = TEXT_IMAGE_MAP.get(text_item.name, "")

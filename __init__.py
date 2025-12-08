@@ -31,7 +31,7 @@ __plugin_meta__ = PluginMetadata(
     """,
     extra=PluginExtraData(
         author="影灵3",
-        version="0.1",
+        version="0.2",
         plugin_type=PluginType.NORMAL,
         menu_type="光遇",
         commands=[
