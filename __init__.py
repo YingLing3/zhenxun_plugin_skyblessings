@@ -84,11 +84,12 @@ try:
     from nonebot_plugin_apscheduler import scheduler
 
     @scheduler.scheduled_job(
-        "interval",
-        hours=6,
+        "cron",
+        hour=1,
+        minute=0,
     )
     async def _():
-        """每6小时清理一次过期的祈福签图片"""
+        """每天凌晨1点清理一次过期的祈福签图片"""
         try:
             clear_blessing_data_pic()
         except Exception as e:

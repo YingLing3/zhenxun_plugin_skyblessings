@@ -12,7 +12,7 @@ BLESSING_CARD_PATH = DATA_PATH / "blessing_sign"
 
 
 def clear_blessing_data_pic():
-    """清理超过7天的祈福签图片"""
+    """清理超过3天的祈福签图片"""
     if not BLESSING_CARD_PATH.exists():
         return
     
@@ -23,8 +23,8 @@ def clear_blessing_data_pic():
         try:
             # 获取文件修改时间
             file_mtime = datetime.fromtimestamp(file_path.stat().st_mtime)
-            # 如果文件超过7天，删除
-            if (now - file_mtime) > timedelta(days=7):
+            # 如果文件超过3天，删除
+            if (now - file_mtime) > timedelta(days=3):
                 file_path.unlink()
                 deleted_count += 1
         except Exception as e:
